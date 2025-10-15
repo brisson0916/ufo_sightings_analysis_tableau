@@ -1,0 +1,17 @@
+[project]
+name = "ufo-sightings-analysis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipykernel>=6.30.1",
+    "matplotlib>=3.10.7",
+    "nltk>=3.9.2",
+    "pandas>=2.3.3",
+    "scikit-learn>=1.7.2",
+    "seaborn>=0.13.2",
+    "vader-sentiment>=3.2.1.1",
+    "vadersentiment>=3.3.2",
+    "wordcloud>=1.9.4",
+]
