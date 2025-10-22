@@ -1,6 +1,6 @@
 # UFO Sighting Data Analysis Project
 
-**Exploring temporal, geographic, and descriptive patterns in UFO sighting reports from the early 1900s until present using Python and Tableau.**
+**Exploring temporal, geographic, and descriptive patterns in UFO sighting reports from the early 1900s until present using Python, Tableau and SQL.**
 
 ## Table of Contents
 
@@ -15,7 +15,10 @@
 
 ## Project Overview
 
-This project analyzes a historical dataset of UFO sightings. The goal is to discover patterns in sighting counts over time, geographic locations such as city or state, common UFO shapes, encounter durations, and sentiment expressed in witness descriptions, for reports across the United States and Canada. The project demonstrates my ability to use python for data cleaning and sentiment analysis, as well as my skills in Tableau to build interactive dashboards for visualization.
+This project analyzes a historical dataset of UFO sightings. The goal is to discover patterns in sighting counts over time, geographic locations such as city or state, common UFO shapes, encounter durations, and sentiment expressed in witness descriptions, for reports across the United States and Canada. The project demonstrates my ability in:
+1. Python for data cleaning and sentiment analysis,
+2. Tableau for building interactive dashboards for visualization, and
+3. SQL for running queries to extract the precise aggregated data needed. (Including CTEs and Window Functions)
 
 
 ## Dataset
@@ -48,6 +51,7 @@ The dataset contains missing values and possibly inaccurate data; extensive clea
 
 - Python (including libraries such as pandas, numpy, re, matplotlib, vaderSentiment, etc.) for data cleaning and sentimental analysis
 - Tableau for interactive data visualization
+- MYSQL and SQL for database integration and running queries
 - Jupyter Notebook for exploratory analysis
 
 
@@ -60,13 +64,18 @@ The dataset contains missing values and possibly inaccurate data; extensive clea
 - Converting Columns to their correct data types (e.g. numeric, DateTime, etc)
 - Using REGEX to clean out special symbols embedded in the values.  
 <br/>
-- **See cleaning_ufo_sighting.ipynb file for detailed operations**
+- **See [cleaning_ingestion.ipynb](cleaning_ingestion.ipynb) file for detailed operations**
 
 
 ## Exploratory Data Analysis & Visualization
 
-- You can also find the dashboard uploaded onto tableau public for the below screenshots:
+For this project, I performed the same analysis using 2 methods to showcase my ability in both:
+1. SQL for queries and then python (matplotlib, seaborn etc) for plotting graph (**See [analysis_plot_graph.ipynb](analysis_plot_graph.ipynb) file for detailed code and graphs**)
+
+2. Tableau for interactive visualization (see screenshots below)
+- You can also find the original dashboard I uploaded onto tableau public:
 ([Tabeau Public: UFO Sighting Data Analysis](https://public.tableau.com/app/profile/brisson.lam/viz/ufo_sighting_data/Duration_Analysis))
+
 
 ### Geographical Analysis
 - Geographical Distribution of sightings align with human habitation, as seen with clusters in the east and west coast, but scarcity in the midwest.
@@ -100,6 +109,7 @@ The dataset contains missing values and possibly inaccurate data; extensive clea
 ![Duration Boxplot](./images/Boxplot_Duration.jpg)
 
 - To do this, we create the following calculated field in Tableau:
+- This will only consider only the bottom 75% of encounters when calculating the average length of UFO encounters.
 ![Clipping Calculation](./images/Clipping_Calculation.jpg)
 
 - The UFO shapes that have the longest average sightings (in seconds) are "Changing" and "Cone", while the shortest ones tend to be "Flash" and "Flare".

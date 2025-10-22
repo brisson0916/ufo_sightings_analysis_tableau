@@ -6,5 +6,26 @@ dist/
 wheels/
 *.egg-info
 
+# Jupyter Notebook specific files
+.ipynb_checkpoints/
+*.ipynb_checkpoints/*
+
+# MacOS Specific
+.DS_Store
+Icon
+._*
+
 # Virtual environments
 .venv
+venv/
+env/
+.Python/
+
+#Environmental Variables
+.env
+
+# Log files
+*.log
+
+# Other temporary or generated files
+*.tmp
