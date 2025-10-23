@@ -10,6 +10,9 @@ wheels/
 .ipynb_checkpoints/
 *.ipynb_checkpoints/*
 
+# Data files
+*.csv
+
 # MacOS Specific
 .DS_Store
 Icon
